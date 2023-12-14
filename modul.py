@@ -1,8 +1,9 @@
 class House:
 
-    numberOfFloors = 10
+    def __init__(self):
+        self.numberOfFloors = 10
 
-    def print_floors(self):
-        for floors in range(1, self.numberOfFloors+1):
-            print("Текущий этаж равен", floors)
+    def setNewNumberOfFloors(self, floors):
+        self.numberOfFloors = floors
+        print("Текущий этаж равен", self.numberOfFloors)
 
