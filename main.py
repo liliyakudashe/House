@@ -1,3 +1,5 @@
+from random import randint
+
 from modul import House, Building
 
 
@@ -19,3 +21,6 @@ print(building2 == building3)
 print(building1 == building4)
 print(bhg)
 
+for i in range(40):
+    b = Building(randint(11, 23), randint(11, 23))
+    print(f'Building {i+1} created. Total buildings: {b.total}')

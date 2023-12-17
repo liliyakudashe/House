@@ -16,9 +16,12 @@ class House:
 
 class Building:
 
-    def __init__(self, floors: int, building_type: str):
+    total = 0
+
+    def __init__(self, floors, building_type):
         self.numberOfFloors = floors
         self.buildingType = building_type
+        Building.total += 1
 
     def __eq__(self, other):
         if isinstance(other, Building):
@@ -28,3 +31,5 @@ class Building:
 
     def __str__(self):
         return f'{self.buildingType}, {self.numberOfFloors}'
+
+
